@@ -140,17 +140,54 @@ header.navbar-scroller.scrolled
         max-height: 100vh
         .carousel-item
             img
+                filter: brightness(0.5)
                 aspect-ratio: 16/8
                 object-fit: cover
                 object-position: center
             .carousel-caption
                 bottom: 50%
                 transform: translateY(50%)
+                .sub-intro, .mid, .cta
+                    overflow: hidden
                 h2, h5
                     color: var(--light)
+                h5
+                    transform: translateY(3rem)
+                    transition: transform 0.5s ease-in-out
+                    overflow: hidden
+                h2
+                    transform: translateY(5.2rem)
+                    transition: transform 1s ease-in-out
+                    overflow: hidden
+                a
+                    transform: translateY(2.5rem)
+                    transition: transform 1.2s ease-in-out
+                    overflow: hidden
+        .carousel-item.active
+            .carousel-caption
+                h1
+                    transition-delay: 0s ease-in-out
+
+                h5
+                    transition-delay: 0.5s ease-in-out
+
+                a
+                    transition-delay: 1s ease-in-out
+
+                h5, h2, a
+                    transform: translateY(0)
         .carousel-control-prev, .carousel-control-next
             width: 8%
             filter: invert(1)
+        .carousel-indicators [data-bs-target]
+            background-color: #e0e0e0d5
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            border: 2px solid #e0e0e0
+            &.active, &:hover
+                background-color: white
+                border-color: var(--color1)
 
 @keyframes marquee
     0%
