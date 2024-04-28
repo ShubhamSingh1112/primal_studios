@@ -34,29 +34,7 @@ $('.gallery-items').imagesLoaded(function () {
     });
 });
 
-// $('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});
-
-let loadTime;
-const loader = document.getElementById("loading-screen");
-window.addEventListener("load", function (e) {
-    loadTime = setTimeout(showPage, 5000);
-});
-function showPage() {
-    loader.style.display = "none";
-}
-$(document).ready(function () {
-    let count = 0;
-    let counting = setInterval(function () {
-        if (count < 101) {
-            $(".loading-text").text(count + "%");
-            count++;
-        } else {
-            clearInterval(counting);
-        }
-    }, 40);
-});
-
-
+// testimonial Slider
 $(document).ready(function () {
     $('.testimonial-slider').slick({
         slidesToShow: 3,
@@ -84,68 +62,67 @@ $(document).ready(function () {
             }
         ]
     });
-});
+    // blog-slider
+    $(".blog-slider").slick({
+        // Customize settings as needed
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 6000,
+        cssEase: "linear",
+        arrows: false,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    });
 
-// blog-slider
-$(".blog-slider").slick({
-    // Customize settings as needed
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 6000,
-    cssEase: "linear",
-    arrows: false,
-    dots: true,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
+    $(".team-slider").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 4000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: "linear",
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
             },
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
             },
-        },
-    ],
-});
-
-$(".team-slider").slick({
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 4000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
             },
-        },
-        {
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-            },
-        },
-    ],
+        ],
+    });
 });
 
 // Scroll Event
