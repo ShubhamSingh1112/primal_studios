@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>The Photgraphy App</title>
+    <!-- Vendor CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="loading-screen">
+        <p class="loading-text">0</p>
+        <div id="loader"></div>
+    </div>
+    <!-- Header -->
+    <header class="fixed-top navbar-scroller" id="header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-transparent" aria-label="Navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.png" alt="img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Portfolio</a>
+                        </li>
+                    </ul>
+                    <div class="contact-button ps-lg-2">
+                        <a class="button-main">Contact Us <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <section id="intro">
+            <div id="mainCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="./img/slider-1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <div class="sub-intro">
+                                <h5>Welcome To</h5>
+                            </div>
+                            <div class="mid">
+                                <h2>Primal Studios</h2>
+                            </div>
+                            <div class="cta">
+                                <a class="btn btn-light me-3 rounded-0" href="#">
+                                    Our Work <i class="bi bi-arrow-right"></i>
+                                </a>
+                                <a class="btn btn-outline-light rounded-0" href="#">
+                                    Contact Us <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./img/slider-2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <div class="sub-intro">
+                                <h5>We Provide Best Digital</h5>
+                            </div>
+                            <div class="mid">
+                                <h2>Photography And Videography</h2>
+                            </div>
+                            <div class="cta">
+                                <a class="btn btn-light me-3 rounded-0" href="#">Our Work <i
+                                        class="bi bi-arrow-right"></i></a>
+                                <a class="btn btn-outline-light rounded-0" href="#">Contact Us <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./img/slider-3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <div class="sub-intro">
+                                <h5>Get The Best Moments Of Your Life</h5>
+                            </div>
+                            <div class="mid">
+                                <h2>Captured With Us.</h2>
+                            </div>
+                            <div class="cta">
+                                <a class="btn btn-light me-3 rounded-0" href="#">Our Work <i
+                                        class="bi bi-arrow-right"></i></a>
+                                <a class="btn btn-outline-light rounded-0" href="#">Contact Us <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="start-pointers">
+                <h6>Films & Cinema | Commercial Ads | Banners | Brochure | Digital Albums | Event Shoots | Films &
+                    Cinema | Commercial Ads | Banners | Brochure | Digital Albums | Event Shoots | Films & Cinema |
+                    Commercial Ads | Banners | Brochure | Digital Albums | Event Shoots</h6>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="top-content">
+                    <div class="row gap-lg-0 gap-3">
+                        <div class="col-lg-6">
+                            <h5>About Us</h5>
+                            <h2>What <span>We</span> Do</h2>
+                            <p>Welcome to Primal Studios. At Primal Studios, we are passionate about capturing the
+                                essence of your brand, event, or
+                                vision through the power of photography. Our team of talented and experienced
+                                photographers are dedicated to delivering exceptional results that exceed your
+                                expectations.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill"></i>
+                                    Professionalism</li>
+                                <li><i class="bi bi-check-circle-fill"></i> HDR
+                                    Videos
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i>
+                                    Privacy</li>
+                                <li><i class="bi bi-check-circle-fill"></i> High
+                                    Quality
+                                    Photos</li>
+                            </ul>
+                            <a class="button-main" href="#">Contact <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="video-block">
+                                <img class="img-fluid" src="./img/about.jpg" title="About Us" />
+                                <a class="btn" data-fancybox="video-box" href="https://vimeo.com/107654760">
+                                    <span><i class="bi bi-play-circle-fill"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-in">
+                <h3>Featured In</h3>
+                <div class="featured-box">
+                    <div class="img-item">
+                        <img src="./img/logo1.svg" alt="brand">
+                    </div>
+                    <div class="img-item">
+                        <img src="./img/logo2.svg" alt="brand">
+                    </div>
+                    <div class="img-item">
+                        <img src="./img/logo3.svg" alt="brand">
+                    </div>
+                    <div class="img-item">
+                        <img src="./img/logo4.svg" alt="brand">
+                    </div>
+                    <div class="img-item">
+                        <img src="./img/logo5.svg" alt="brand">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="info-counter">
+            <div class="wrapper">
+                <div class="top-content">
+                    <h2>Why <span>Choose</span> Primal Studios?</h2>
+                </div>
+                <div class="row gap-lg-0 gap-3">
+                    <div class="col-lg-4">
+                        <div class="more-info-box">
+                            <div class="camera-icon"><i class="bi bi-camera2"></i></div>
+                            <p>At Primal Studios, we believe that great photography is the result of a collaborative
+                                process.
+                                That's why we work closely with our clients to understand their unique needs and
+                                vision, and
+                                then use our expertise to bring their ideas to life.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="more-info-box">
+                            <div class="camera-icon"><i class="bi bi-camera2"></i></div>
+                            <p>Our team of photographers are not only highly skilled, but they are also passionate
+                                about their
+                                craft. They use the latest equipment and techniques to ensure that every image we
+                                capture is of
+                                the highest quality.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="more-info-box">
+                            <div class="camera-icon"><i class="bi bi-camera2"></i></div>
+                            <p>Whether you're looking to showcase your brand, document a special event, or create a
+                                timeless
+                                piece of art, Primal Studios is here to help. Contact us today to learn more about
+                                our services
+                                and how we can help you achieve your photography goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="bg-light">
+                <div class="counter-grid">
+                    <div class="counter-box">
+                        <h3 class="counter-title">Years</h3>
+                        <p class="counter-text"><span data-count="7">0</span>+</p>
+                    </div>
+                    <div class="counter-box">
+                        <h3 class="counter-title">Projects</h3>
+                        <p class="counter-text"><span data-count="1000">0</span>+</p>
+                    </div>
+                    <div class="counter-box">
+                        <h3 class="counter-title">Clients</h3>
+                        <p class="counter-text"><span data-count="300">0</span>+</p>
+                    </div>
+                    <div class="counter-box">
+                        <h3 class="counter-title">Experts</h3>
+                        <p class="counter-text"><span data-count="150">0</span>+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-clients">
+            <div class="wrapper">
+                <h2>Take a look at our <span>beautiful works</span></h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="gallery-filter list-unstyled d-flex flex-wrap">
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" class="active" data-filter="*">
+                                All
+                            </li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".boudoir">Boudoir
+                            </li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".family">Family</li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".kids">Kids</li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".fashion">Fashion
+                            </li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".product">Product
+                            </li>
+                            <li class="btn btn-sm rounded-pill btn-outline-light me-2" data-filter=".wedding">Wedding
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row gallery-items">
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 product">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery1.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery1.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Bicycle</div>
+                                    <h4 class="gallery-masonry-item-title">Product
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 family">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery2.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery2.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Beach Out
+                                    </div>
+                                    <h4 class="gallery-masonry-item-title">Family
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 fashion">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery4.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery4.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Profile</div>
+                                    <h4 class="gallery-masonry-item-title">Fashion</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 boudoir">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery5.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery5.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Model</div>
+                                    <h4 class="gallery-masonry-item-title">Boudoir</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 fashion">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery6.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery6.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">PV Store</div>
+                                    <h4 class="gallery-masonry-item-title">Fashion</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 family">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery3.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery3.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">The Oxlade Sisters
+                                    </div>
+                                    <h4 class="gallery-masonry-item-title">Family
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 boudoir">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery7.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery7.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Photoshoot</div>
+                                    <h4 class="gallery-masonry-item-title">Boudoir</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 product">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery8.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery8.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Sunglassess
+                                    </div>
+                                    <h4 class="gallery-masonry-item-title">Product</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 kids">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery9.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery9.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Colorful Kid</div>
+                                    <h4 class="gallery-masonry-item-title">Kids</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 fashion">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery10.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery10.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Women Hat</div>
+                                    <h4 class="gallery-masonry-item-title">Fashion</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 kids">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery11.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery11.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Little Playful Jason</div>
+                                    <h4 class="gallery-masonry-item-title">Kids</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 fashion">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery12.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery12.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Kino's Lingrie</div>
+                                    <h4 class="gallery-masonry-item-title">Fashion</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 wedding">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery13.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery13.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Wedding Day</div>
+                                    <h4 class="gallery-masonry-item-title">Wedding</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 gallery-masonry-wrapper single-item mb-3 wedding">
+                        <a data-fancybox="responsive" data-caption="hello world" data-src="img/gallery14.jpg" title=""
+                            class="gallery-masonry-item-img-link img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img"> <img src="img/gallery14.jpg" class="img-fluid mx-auto d-block"
+                                        alt=""> </div>
+
+                                <div class="gallery-masonry-item-content">
+                                    <div class="gallery-masonry-item-category">Wedding Photoshoot</div>
+                                    <h4 class="gallery-masonry-item-title">Wedding</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="top-content">
+                    <h2>What Clients Say About Us</h2>
+                    <p>The Marcom Avenue is an integrated marketing agency that offers offline and online activation,
+                        Technical
+                        services, Branding, Video production, PR, and more, all under the same roof.</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>"Primal Studios has been an invaluable partner in our efforts to elevate our brand's
+                                visual presence. Their team of photographers worked closely with us to understand our
+                                brand identity and create a series of stunning images that have been instrumental in our
+                                marketing campaigns. The level of professionalism and attention to detail they bring to
+                                every project is truly impressive."</p>
+                            <div class="author-info">
+                                <img decoding="async" src="img/testimonial-1.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Sammy James</h3>
+                                    <p>Creative Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>When it came to documenting our annual charity gala, we knew we needed a photography team
+                                that could capture the energy and excitement of the event. Primal Studios exceeded our
+                                expectations in every way. Their photographers were professional, discreet, and managed
+                                to perfectly encapsulate the essence of the evening. The images they delivered have been
+                                invaluable in our post-event marketing efforts.</p>
+                            <div class="author-info">
+                                <img decoding="async" src="./img/testimonial-2.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Alexa Stacy</h3>
+                                    <p>Event Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>I've worked with Primal Studios on several commercial photography projects, and I've
+                                always been impressed by their exceptional service and the stunning results they
+                                deliver. Their team is highly skilled, creative, and dedicated to understanding our
+                                brand and vision. I would highly recommend Primal Studios to anyone looking for
+                                top-notch photography services.</p>
+                            <div class="author-info">
+                                <img decoding="async" src="./img/testimonial-3.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Amanda Pierce</h3>
+                                    <p>Marketing Managers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>"Primal Studios has been an invaluable partner in our efforts to elevate our brand's
+                                visual presence. Their team of photographers worked closely with us to understand our
+                                brand identity and create a series of stunning images that have been instrumental in our
+                                marketing campaigns. The level of professionalism and attention to detail they bring to
+                                every project is truly impressive."</p>
+                            <div class="author-info">
+                                <img decoding="async" src="img/testimonial-1.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Sammy James</h3>
+                                    <p>Creative Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>When it came to documenting our annual charity gala, we knew we needed a photography team
+                                that could capture the energy and excitement of the event. Primal Studios exceeded our
+                                expectations in every way. Their photographers were professional, discreet, and managed
+                                to perfectly encapsulate the essence of the evening. The images they delivered have been
+                                invaluable in our post-event marketing efforts.</p>
+                            <div class="author-info">
+                                <img decoding="async" src="./img/testimonial-2.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Alexa Stacy</h3>
+                                    <p>Event Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p>I've worked with Primal Studios on several commercial photography projects, and I've
+                                always been impressed by their exceptional service and the stunning results they
+                                deliver. Their team is highly skilled, creative, and dedicated to understanding our
+                                brand and vision. I would highly recommend Primal Studios to anyone looking for
+                                top-notch photography services.</p>
+                            <div class="author-info">
+                                <img decoding="async" src="./img/testimonial-3.jpg" alt="Author 1">
+                                <div class="author-details">
+                                    <h3>Amanda Pierce</h3>
+                                    <p>Marketing Managers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies">
+            <div class="container">
+                <div class="top-content">
+                    <h2>What <span>We Do</span></h2>
+                    <p>Primal Studios offers a wide range of photography services. Here are some of them below.</p>
+                </div>
+                <div class="cs-grid">
+                    <div class="cs-box">
+                        <img src="./img/cinematography.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Films & Cinema</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="cs-box">
+                        <img src="./img/photography.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Commercial Ads</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="cs-box">
+                        <img src="./img/banner.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Banners</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="cs-box">
+                        <img src="./img/brouchure.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Brochure</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="cs-box">
+                        <img src="./img/background.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Digital Albums</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="cs-box">
+                        <img src="./img/videography.jpg" alt="img">
+                        <a class="box-link" href="#">
+                            <h4>Event Shoots</h4>
+                            <button class="btn" type="button">
+                                <span>Learn More <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="top-content">
+                    <h2>Latest News and Blogs</h2>
+                </div>
+                <div class="blog-slider">
+                    <a href="#" class="item">
+                        <img src="./img/blog-1.jpg" alt="img">
+                        <h5>The Magic Behind Primal Studios' Event Shoots</h5>
+                        <button class="button-main" type="button">Read More <i class="bi bi-arrow-right"></i></button>
+                    </a>
+                    <a href="#" class="item">
+                        <img src="./img/blog-2.jpg" alt="img">
+                        <h5>Impact of Primal Studios' Commercial Ads on Brand Identity</h5>
+                        <button class="button-main" type="button">Read More <i class="bi bi-arrow-right"></i></button>
+                    </a>
+                    <a href="#" class="item">
+                        <img src="./img/blog-3.jpg" alt="img">
+                        <h5>A Dive into Primal Studios' Films & Cinema Services</h5>
+                        <button class="button-main" type="button">Read More <i class="bi bi-arrow-right"></i></button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-title">
+                    <h2>Find Us Here</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="map-block">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.8643380357144!2d-71.9558318233543!3d44.04485772701109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb48c2ba9d72839%3A0x8e50909b39404531!2s446%20Page%20Rd%2C%20Pike%2C%20NH%2003780%2C%20USA!5e0!3m2!1sen!2sin!4v1714313689566!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-form-block">
+                        <h3>Say Hello</h3>
+                        <p>Throw us a challenge.</p>
+                        <form method="post" action="">
+                            <label for="name">Name</label>
+                            <input class="" type="text" name="name" id="name" maxlength="35" autocomplete="off"
+                                required="" placeholder="Enter Name">
+                            <label for="email">Email</label>
+                            <input class="" type="email" name="email" id="email" autocomplete="off" required=""
+                                placeholder="Enter Email id">
+                            <label for="phone">Phone</label>
+                            <input class="" maxlength="10" type="tel" name="mobile" id="mobile" autocomplete="off"
+                                required="" placeholder="Enter Phone no.">
+                            <label for="message">Message</label>
+                            <textarea name="enquiry" class="" rows="4" id="enquiry" placeholder="Write Your Message...."
+                                type="text"></textarea>
+                            <button class="button-main" type="submit">SUBMIT <i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <div class="top-content">
+                    <h2>Follow Us On <span>Instagram</span></h2>
+                    <p>Want to explore the world of photography and discover new creative genres? Follow Primal Studios
+                        on Instagram for captivating visuals and insights into the art of photography! 📸 #PrimalStudios
+                        #PhotographyJourney</p>
+                    <a class="button-main" href="#">Follow Us <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <h3></h3>
+            <div class="team-slider">
+                <div class="img-item">
+                    <img src="./img/insta-1.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-2.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-3.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-4.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-5.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-6.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-1.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-2.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-3.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-4.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-5.jpg" alt="tma">
+                </div>
+                <div class="img-item">
+                    <img src="./img/insta-6.jpg" alt="tma">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="col-4">
+                        <a class="ftr-logo" href="#">
+                            <img src="./img/logo.png" alt="logo">
+                        </a>
+                        <h5>Follow Us</h5>
+                        <div class="social-row">
+                            <a href="#" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Services</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h4>Our Solutions</h4>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Films & Cinema</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Commercial Ads</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Banners</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Brochure</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Albums</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Event Shoots</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h4>Contact</h4>
+                        <div class="address-block">
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> 35 N 1st Street, Thurston, NE, <br>United States - 68062
+                            </a>
+                        </div>
+                        <div class="contact-block">
+                            <p><a href="tel:+1 129-223-5646"><i class="bi bi-telephone-fill"></i> +1 129-223-5646</a>
+                        </div>
+                        <div class="contact-block">
+                            <p><a href="mailto:info@primalstudios.com"><i class="bi bi-envelope-fill"></i>
+                                    info@primalstudios.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <a href="javascript:void(0)">Primal Studios</a>. All Rights Reserved.</p>
+            <p class="p-end"><a href="javascript:void(0)">Designed By Shubham Singh</a></p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <button type="button" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
