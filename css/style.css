@@ -67,42 +67,6 @@ h2 {
   display: none;
 }
 
-#loading-screen {
-  position: fixed;
-  z-index: 1041;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  background-color: var(--dark);
-  place-content: center;
-  text-align: center;
-  /* Center the loader */
-}
-#loading-screen .loading-text {
-  font-size: var(--fs-Heading);
-  color: var(--light);
-}
-#loading-screen #loader {
-  z-index: 1042;
-  width: 300px;
-  height: 5px;
-  margin-top: 10px;
-  border: 0;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, var(--color1), var(--color1));
-  background-size: 0 0;
-  background-repeat: no-repeat;
-  animation: fill 5s ease-out forwards;
-}
-
-@keyframes fill {
-  from {
-    background-size: 0 100%;
-  }
-  to {
-    background-size: 100% 100%;
-  }
-}
 header.navbar-scroller {
   background-image: linear-gradient(to bottom, var(--dark), var(--transparent));
   transition: 0.25s ease-in-out;
@@ -165,6 +129,7 @@ header.navbar-scroller.scrolled .navbar-brand {
   max-height: 100vh;
 }
 #intro #mainCarousel .carousel-item img {
+  filter: brightness(50%);
   aspect-ratio: 16/8;
   -o-object-fit: cover;
      object-fit: cover;
@@ -175,12 +140,53 @@ header.navbar-scroller.scrolled .navbar-brand {
   bottom: 50%;
   transform: translateY(50%);
 }
+#intro #mainCarousel .carousel-item .carousel-caption .sub-intro, #intro #mainCarousel .carousel-item .carousel-caption .mid, #intro #mainCarousel .carousel-item .carousel-caption .cta {
+  overflow: hidden;
+}
 #intro #mainCarousel .carousel-item .carousel-caption h2, #intro #mainCarousel .carousel-item .carousel-caption h5 {
   color: var(--light);
+}
+#intro #mainCarousel .carousel-item .carousel-caption h5 {
+  transform: translateY(3.5rem);
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+#intro #mainCarousel .carousel-item .carousel-caption h2 {
+  transform: translateY(5.25rem);
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+}
+#intro #mainCarousel .carousel-item .carousel-caption a {
+  transform: translateY(2.5rem);
+  transition: transform 1.5s ease-in-out;
+  overflow: hidden;
+}
+#intro #mainCarousel .carousel-item.active .carousel-caption h1 {
+  transition-delay: 0s ease-in-out;
+}
+#intro #mainCarousel .carousel-item.active .carousel-caption h5 {
+  transition-delay: 0.5s ease-in-out;
+}
+#intro #mainCarousel .carousel-item.active .carousel-caption a {
+  transition-delay: 1s ease-in-out;
+}
+#intro #mainCarousel .carousel-item.active .carousel-caption h5, #intro #mainCarousel .carousel-item.active .carousel-caption h2, #intro #mainCarousel .carousel-item.active .carousel-caption a {
+  transform: translateY(0);
 }
 #intro #mainCarousel .carousel-control-prev, #intro #mainCarousel .carousel-control-next {
   width: 8%;
   filter: invert(1);
+}
+#intro #mainCarousel .carousel-indicators [data-bs-target] {
+  background-color: rgba(224, 224, 224, 0.8352941176);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+}
+#intro #mainCarousel .carousel-indicators [data-bs-target].active, #intro #mainCarousel .carousel-indicators [data-bs-target]:hover {
+  background-color: white;
+  border-color: var(--color1);
 }
 
 @keyframes marquee {
